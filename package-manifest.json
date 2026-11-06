@@ -1,0 +1,19 @@
+{
+  "product_id": "JLZ-EDU-SK-062",
+  "repository_name": "edu-class-cost-allocation",
+  "product_type": "Skill",
+  "version": "1.0.0",
+  "package_path": "dist/edu-class-cost-allocation-v1.0.0.zip",
+  "sha256": "A98EB3278C2B6B5DCE136AEBDD7485B2F147A818DDF4364A2616430AECE2889E",
+  "bytes": 5389,
+  "entries": [
+    "edu-class-cost-allocation/SKILL.md",
+    "edu-class-cost-allocation/references/DOMAIN_GUIDE.md",
+    "edu-class-cost-allocation/references/EXAMPLES.md",
+    "edu-class-cost-allocation/templates/OUTPUT_TEMPLATE.md",
+    "edu-class-cost-allocation/scripts/calculate.js"
+  ],
+  "built_at": "2026-11-06T22:45:25.7745328+08:00",
+  "status": "PACKAGE_READY",
+  "workbuddy_validation": "NOT_VERIFIED"
+}

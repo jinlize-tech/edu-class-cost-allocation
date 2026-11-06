@@ -1,0 +1,25 @@
+{
+  "number": 78,
+  "product_id": "JLZ-EDU-SK-062",
+  "chinese_name": "班级成本分摊",
+  "english_name": "Class Cost Allocation",
+  "repository_name": "edu-class-cost-allocation",
+  "product_type": "Skill",
+  "category": "07 财务运营中心",
+  "version": "1.0.0",
+  "status": "PACKAGE_READY",
+  "workbuddy_validation": "NOT_VERIFIED",
+  "license": "Apache-2.0",
+  "baseline_tag": "education-product-baseline-v1.0.0",
+  "package_path": "dist/edu-class-cost-allocation-v1.0.0.zip",
+  "calculator": true,
+  "core_input": "班级收入、教师课时、教室资源、教材教具、营销费用和分摊规则",
+  "main_output": "成本归集表、分摊方法、单班成本、单位成本、假设和待核对账目",
+  "package_entries": [
+    "edu-class-cost-allocation/SKILL.md",
+    "edu-class-cost-allocation/references/DOMAIN_GUIDE.md",
+    "edu-class-cost-allocation/references/EXAMPLES.md",
+    "edu-class-cost-allocation/templates/OUTPUT_TEMPLATE.md",
+    "edu-class-cost-allocation/scripts/calculate.js"
+  ]
+}

@@ -1,0 +1,14 @@
+const fs = require('fs');
+const input = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+const directCost = Number(input.directCost || 0);
+const indirectCost = Number(input.indirectCost || 0);
+const allocationBase = Number(input.allocationBase || 0);
+const classBase = Number(input.classBase || 0);
+const revenue = Number(input.revenue || 0);
+const studentCount = Number(input.studentCount || 0);
+const allocatedIndirect = allocationBase ? Number((indirectCost * classBase / allocationBase).toFixed(2)) : null;
+const totalCost = allocatedIndirect === null ? null : Number((directCost + allocatedIndirect).toFixed(2));
+const profit = totalCost === null ? null : Number((revenue - totalCost).toFixed(2));
+const margin = revenue && profit !== null ? Number((profit / revenue).toFixed(4)) : null;
+const unitCost = studentCount && totalCost !== null ? Number((totalCost / studentCount).toFixed(2)) : null;
+console.log(JSON.stringify({status:'ok',formula_version:'1.0.0',directCost,indirectCost,allocatedIndirect,totalCost,profit,margin,unitCost}, null, 2));
