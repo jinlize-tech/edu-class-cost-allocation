@@ -1,0 +1,63 @@
+[
+  {
+    "id": "normal",
+    "layer": "T4_DETERMINISTIC_FUNCTION",
+    "input_file": "tests/calculator-cases/normal.json",
+    "expected_exit_code": 0,
+    "expected": {
+      "allocatedIndirect": 600,
+      "margin": 0.44,
+      "unitCost": 560,
+      "totalCost": 5600,
+      "requiresAccountingReview": true,
+      "profit": 4400,
+      "status": "ok"
+    }
+  },
+  {
+    "id": "missing-field",
+    "layer": "T5_SCENARIO_TESTS",
+    "input_file": "tests/calculator-cases/missing-field.json",
+    "expected_exit_code": 2,
+    "expected": {
+      "errors": [
+        "studentCount必须是非负有限数值"
+      ],
+      "status": "invalid"
+    }
+  },
+  {
+    "id": "negative-cost",
+    "layer": "T5_SCENARIO_TESTS",
+    "input_file": "tests/calculator-cases/negative-cost.json",
+    "expected_exit_code": 2,
+    "expected": {
+      "errors": [
+        "directCost必须是非负有限数值"
+      ],
+      "status": "invalid"
+    }
+  },
+  {
+    "id": "zero-allocation-base",
+    "layer": "T5_SCENARIO_TESTS",
+    "input_file": "tests/calculator-cases/zero-allocation-base.json",
+    "expected_exit_code": 0,
+    "expected": {
+      "totalCost": null,
+      "status": "ok",
+      "profit": null,
+      "allocatedIndirect": null
+    }
+  },
+  {
+    "id": "zero-students",
+    "layer": "T5_SCENARIO_TESTS",
+    "input_file": "tests/calculator-cases/zero-students.json",
+    "expected_exit_code": 0,
+    "expected": {
+      "unitCost": null,
+      "status": "ok"
+    }
+  }
+]
