@@ -5,13 +5,13 @@
     "input_file": "tests/calculator-cases/normal.json",
     "expected_exit_code": 0,
     "expected": {
+      "status": "ok",
+      "profit": 4400,
+      "unitCost": 560,
+      "requiresAccountingReview": true,
       "allocatedIndirect": 600,
       "margin": 0.44,
-      "unitCost": 560,
-      "totalCost": 5600,
-      "requiresAccountingReview": true,
-      "profit": 4400,
-      "status": "ok"
+      "totalCost": 5600
     }
   },
   {
@@ -20,10 +20,10 @@
     "input_file": "tests/calculator-cases/missing-field.json",
     "expected_exit_code": 2,
     "expected": {
+      "status": "invalid",
       "errors": [
         "studentCount必须是非负有限数值"
-      ],
-      "status": "invalid"
+      ]
     }
   },
   {
@@ -32,10 +32,10 @@
     "input_file": "tests/calculator-cases/negative-cost.json",
     "expected_exit_code": 2,
     "expected": {
+      "status": "invalid",
       "errors": [
         "directCost必须是非负有限数值"
-      ],
-      "status": "invalid"
+      ]
     }
   },
   {
@@ -44,9 +44,9 @@
     "input_file": "tests/calculator-cases/zero-allocation-base.json",
     "expected_exit_code": 0,
     "expected": {
-      "totalCost": null,
-      "status": "ok",
       "profit": null,
+      "status": "ok",
+      "totalCost": null,
       "allocatedIndirect": null
     }
   },
@@ -56,8 +56,8 @@
     "input_file": "tests/calculator-cases/zero-students.json",
     "expected_exit_code": 0,
     "expected": {
-      "unitCost": null,
-      "status": "ok"
+      "status": "ok",
+      "unitCost": null
     }
   }
 ]

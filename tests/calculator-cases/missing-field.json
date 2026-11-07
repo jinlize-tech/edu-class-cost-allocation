@@ -1,7 +1,7 @@
 {
-  "allocationBase": 100,
   "indirectCost": 3000,
-  "revenue": 10000,
+  "allocationBase": 100,
   "directCost": 5000,
-  "classBase": 20
+  "classBase": 20,
+  "revenue": 10000
 }

@@ -16,7 +16,7 @@ const classBase = field('classBase');
 const revenue = field('revenue');
 const studentCount = field('studentCount');
 if (errors.length) {
-  console.log(JSON.stringify({status:'invalid',formula_version:'1.0.1',errors}, null, 2));
+  console.log(JSON.stringify({status:'invalid',formula_version:'1.0.2',errors}, null, 2));
   process.exit(2);
 }
 const allocatedIndirect = allocationBase ? Number((indirectCost * classBase / allocationBase).toFixed(2)) : null;
@@ -27,4 +27,4 @@ const unitCost = studentCount && totalCost !== null ? Number((totalCost / studen
 const warnings = [];
 if (allocationBase === 0) warnings.push('分摊基数为零，未计算间接成本分摊');
 if (studentCount === 0) warnings.push('学生人数为零，单位成本不可计算');
-console.log(JSON.stringify({status:'ok',formula_version:'1.0.1',directCost,indirectCost,allocatedIndirect,totalCost,profit,margin,unitCost,warnings,requiresAccountingReview:true}, null, 2));
+console.log(JSON.stringify({status:'ok',formula_version:'1.0.2',directCost,indirectCost,allocatedIndirect,totalCost,profit,margin,unitCost,warnings,requiresAccountingReview:true}, null, 2));

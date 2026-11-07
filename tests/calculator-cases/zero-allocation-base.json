@@ -1,8 +1,8 @@
 {
   "allocationBase": 0,
-  "classBase": 1,
   "revenue": 200,
   "directCost": 100,
   "studentCount": 2,
+  "classBase": 1,
   "indirectCost": 50
 }
