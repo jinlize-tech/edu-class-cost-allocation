@@ -6,12 +6,12 @@
     "expected_exit_code": 0,
     "expected": {
       "status": "ok",
-      "profit": 4400,
+      "totalCost": 5600,
       "unitCost": 560,
+      "profit": 4400,
       "requiresAccountingReview": true,
-      "allocatedIndirect": 600,
       "margin": 0.44,
-      "totalCost": 5600
+      "allocatedIndirect": 600
     }
   },
   {
@@ -44,9 +44,9 @@
     "input_file": "tests/calculator-cases/zero-allocation-base.json",
     "expected_exit_code": 0,
     "expected": {
+      "totalCost": null,
       "profit": null,
       "status": "ok",
-      "totalCost": null,
       "allocatedIndirect": null
     }
   },
